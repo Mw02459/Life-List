@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Photo_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fif-f3-CDq">
+                                <rect key="frame" x="119" y="475" width="137" height="48"/>
+                                <color key="backgroundColor" red="0.97170915252655254" green="0.91763045498836115" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <state key="normal" title="Take a photo">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="handleTakePhotoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OME-GF-iMa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZK-yj-TGs">
+                                <rect key="frame" x="119" y="536" width="137" height="48"/>
+                                <color key="backgroundColor" red="0.97170915250000001" green="0.91763045499999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <state key="normal" title="Save photo">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="handleSavePhotoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bgX-RN-ZTl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO7-n5-lNG">
+                                <rect key="frame" x="119" y="597" width="137" height="48"/>
+                                <color key="backgroundColor" red="0.97170915250000001" green="0.91763045499999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <state key="normal" title="Gallery">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="PJQ-QD-HoM" kind="show" identifier="gallerySegue" id="XCd-XC-wqy"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FH6-7m-mwo">
+                                <rect key="frame" x="54" y="150" width="267" height="317"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="myCamera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7p-kE-egY">
+                                <rect key="frame" x="26" y="20" width="322" height="108"/>
+                                <color key="backgroundColor" red="0.97170915250000001" green="0.91763045499999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.985596674313587" green="0.95634043367655186" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N7p-kE-egY" secondAttribute="bottom" constant="514" id="0dA-Qg-kLh"/>
+                            <constraint firstItem="FH6-7m-mwo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="5JY-lN-XzB"/>
+                            <constraint firstItem="FH6-7m-mwo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="6Ze-s1-Fup"/>
+                            <constraint firstItem="hZK-yj-TGs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="8iW-6R-38Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hZK-yj-TGs" secondAttribute="trailing" constant="119" id="BiZ-hH-YEh"/>
+                            <constraint firstItem="N7p-kE-egY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="DyV-dT-U4K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fif-f3-CDq" secondAttribute="trailing" constant="119" id="H8O-55-1zc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FH6-7m-mwo" secondAttribute="bottom" constant="200" id="Ip9-vP-6Bk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N7p-kE-egY" secondAttribute="trailing" constant="27" id="NNk-fK-2Rg"/>
+                            <constraint firstItem="N7p-kE-egY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="T3h-sn-NVU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FO7-n5-lNG" secondAttribute="trailing" constant="119" id="UlB-rT-E0u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FH6-7m-mwo" secondAttribute="trailing" constant="54" id="YaT-lC-aNj"/>
+                            <constraint firstItem="hZK-yj-TGs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="516" id="bHc-9Y-21g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FO7-n5-lNG" secondAttribute="bottom" constant="22" id="ggA-Ow-7YD"/>
+                            <constraint firstItem="FO7-n5-lNG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="577" id="mLj-Hh-oGZ"/>
+                            <constraint firstItem="Fif-f3-CDq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="455" id="oXO-aw-eeS"/>
+                            <constraint firstItem="FO7-n5-lNG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="p8a-V5-Zgc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hZK-yj-TGs" secondAttribute="bottom" constant="83" id="qNH-uo-gCx"/>
+                            <constraint firstItem="Fif-f3-CDq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="skm-DQ-kEb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fif-f3-CDq" secondAttribute="bottom" constant="144" id="usw-Xi-DRt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myImageView" destination="FH6-7m-mwo" id="qjo-KY-qLL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="117.39130434782609"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="FYv-cz-TOv">
+            <objects>
+                <viewController id="PJQ-QD-HoM" userLabel="Gallery View Controller" customClass="GalleryViewController" customModule="Photo_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FXW-0j-2Xu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="la2-Vc-9KO">
+                                <rect key="frame" x="62" y="77" width="250" height="557"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8x-r5-Ftp">
+                                <rect key="frame" x="14" y="32" width="53" height="48"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <state key="normal" title="&lt; Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="PJY-Y5-JqM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZA-BL-hXo">
+                                <rect key="frame" x="329" y="313" width="30" height="41"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightButton:" destination="PJQ-QD-HoM" eventType="touchUpInside" id="6ns-CT-n32"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFE-v2-Qxz">
+                                <rect key="frame" x="16" y="313" width="30" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftButton:" destination="PJQ-QD-HoM" eventType="touchUpInside" id="oMz-C6-CTC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98434454202651978" green="0.95680707693099976" blue="0.99607580900192261" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="nzW-d4-wxI" firstAttribute="trailing" secondItem="PZA-BL-hXo" secondAttribute="trailing" constant="15" id="9pw-pV-8Od"/>
+                            <constraint firstItem="nzW-d4-wxI" firstAttribute="trailing" secondItem="la2-Vc-9KO" secondAttribute="trailing" constant="63" id="E5m-lj-tAE"/>
+                            <constraint firstItem="la2-Vc-9KO" firstAttribute="leading" secondItem="nzW-d4-wxI" secondAttribute="leading" constant="62" id="FDo-xh-0sE"/>
+                            <constraint firstItem="l8x-r5-Ftp" firstAttribute="top" secondItem="nzW-d4-wxI" secondAttribute="top" constant="12" id="G5m-E1-P4d"/>
+                            <constraint firstItem="nzW-d4-wxI" firstAttribute="bottom" secondItem="la2-Vc-9KO" secondAttribute="bottom" constant="33" id="NGj-A0-Vr0"/>
+                            <constraint firstItem="PZA-BL-hXo" firstAttribute="centerY" secondItem="FXW-0j-2Xu" secondAttribute="centerY" id="Nq3-fZ-jAD"/>
+                            <constraint firstItem="PZA-BL-hXo" firstAttribute="leading" secondItem="la2-Vc-9KO" secondAttribute="trailing" constant="18" id="RIi-Ny-SjB"/>
+                            <constraint firstItem="l8x-r5-Ftp" firstAttribute="leading" secondItem="nzW-d4-wxI" secondAttribute="leading" constant="14" id="TED-9c-llN"/>
+                            <constraint firstItem="nzW-d4-wxI" firstAttribute="trailing" secondItem="l8x-r5-Ftp" secondAttribute="trailing" constant="308" id="Zub-Li-XOw"/>
+                            <constraint firstItem="nzW-d4-wxI" firstAttribute="bottom" secondItem="l8x-r5-Ftp" secondAttribute="bottom" constant="587" id="hCT-wu-sew"/>
+                            <constraint firstItem="la2-Vc-9KO" firstAttribute="top" secondItem="nzW-d4-wxI" secondAttribute="top" constant="57" id="iR0-l4-U7V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nzW-d4-wxI"/>
+                    </view>
+                    <connections>
+                        <outlet property="galleryImageView" destination="la2-Vc-9KO" id="lg3-AR-uur"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RpY-pa-BWB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776.79999999999995" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>

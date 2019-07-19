@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Photo View Controller" id="BYZ-38-t0r" customClass="ViewController" customModule="MyPhotoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVW-qh-FhW">
+                                <rect key="frame" x="35" y="691" width="140" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="bur-5B-WPz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Go to Gallery"/>
+                                <connections>
+                                    <segue destination="xRQ-Ls-QWd" kind="show" id="cr5-tV-V9T"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1UV-3A-ueW">
+                                <rect key="frame" x="45" y="93" width="324" height="361"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TU-qh-hlu">
+                                <rect key="frame" x="35" y="514" width="119" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="119" id="8YS-lp-hhj"/>
+                                    <constraint firstAttribute="width" constant="119" id="zds-yK-R8V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="TakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SOj-sz-yc5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzO-eh-S9I">
+                                <rect key="frame" x="35" y="607" width="123" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="3rk-q1-zCb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Save Photo"/>
+                                <connections>
+                                    <action selector="SavePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4H7-tR-0Fg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9TU-qh-hlu" firstAttribute="top" secondItem="1UV-3A-ueW" secondAttribute="bottom" constant="60" id="6j5-lO-fxq"/>
+                            <constraint firstItem="9TU-qh-hlu" firstAttribute="leading" secondItem="aVW-qh-FhW" secondAttribute="leading" id="CSY-iJ-O5A"/>
+                            <constraint firstItem="9TU-qh-hlu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="Pd0-Hx-qRm"/>
+                            <constraint firstAttribute="bottom" secondItem="9TU-qh-hlu" secondAttribute="bottom" constant="340" id="S3o-JE-zWp"/>
+                            <constraint firstItem="9TU-qh-hlu" firstAttribute="top" secondItem="1UV-3A-ueW" secondAttribute="bottom" constant="60" id="SL7-jW-pA3"/>
+                            <constraint firstItem="9TU-qh-hlu" firstAttribute="top" secondItem="1UV-3A-ueW" secondAttribute="bottom" constant="60" id="ZfJ-7z-q89"/>
+                            <constraint firstItem="1UV-3A-ueW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="cQ0-VI-5Dn"/>
+                            <constraint firstItem="1UV-3A-ueW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="liC-je-P3M"/>
+                            <constraint firstItem="1UV-3A-ueW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="raH-lL-dzI"/>
+                            <constraint firstItem="lzO-eh-S9I" firstAttribute="top" secondItem="9TU-qh-hlu" secondAttribute="bottom" constant="51" id="reg-A7-jeC"/>
+                            <constraint firstItem="aVW-qh-FhW" firstAttribute="top" secondItem="lzO-eh-S9I" secondAttribute="bottom" constant="42" id="ugm-uc-61i"/>
+                            <constraint firstItem="9TU-qh-hlu" firstAttribute="leading" secondItem="lzO-eh-S9I" secondAttribute="leading" id="xTs-k4-gHx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="MyImageView" destination="1UV-3A-ueW" id="qbW-sG-Tdl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7.2463768115942031" y="117.85714285714285"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="4pa-VQ-0HM">
+            <objects>
+                <viewController title="Gallery View Controller" id="xRQ-Ls-QWd" customClass="GalleryViewController" customModule="MyPhotoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qkl-9h-sF5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XqE-1y-aqs">
+                                <rect key="frame" x="49" y="77" width="316" height="379"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="379" id="ZAT-xi-WS7"/>
+                                    <constraint firstAttribute="width" constant="316" id="vpU-4R-2se"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6j-BS-tFl">
+                                <rect key="frame" x="174" y="519" width="66" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="OcU-3v-ZnE"/>
+                                    <constraint firstAttribute="height" constant="42" id="ysH-1h-w4C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="glG-37-6Cb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="B6j-BS-tFl" firstAttribute="top" secondItem="XqE-1y-aqs" secondAttribute="bottom" constant="63" id="7Hp-bl-Icz"/>
+                            <constraint firstItem="B6j-BS-tFl" firstAttribute="centerX" secondItem="qkl-9h-sF5" secondAttribute="centerX" id="Gfe-IC-gsZ"/>
+                            <constraint firstItem="XqE-1y-aqs" firstAttribute="centerX" secondItem="qkl-9h-sF5" secondAttribute="centerX" id="XR4-OZ-15u"/>
+                            <constraint firstItem="XqE-1y-aqs" firstAttribute="top" secondItem="izx-xO-f2j" secondAttribute="top" constant="33" id="u55-Sz-Uw4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="izx-xO-f2j"/>
+                    </view>
+                    <connections>
+                        <outlet property="MyGalleryImage" destination="XqE-1y-aqs" id="L4J-hf-BGc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7x8-dq-UOt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+</document>

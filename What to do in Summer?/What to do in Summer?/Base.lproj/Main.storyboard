@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Screen View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Home Screen View Controller" customClass="ViewController" customModule="What_to_do_in_Summer_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What to Do in Summer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmj-Y3-XTF">
+                                <rect key="frame" x="43" y="427.5" width="328.5" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="DNo-Mn-Hh8"/>
+                                    <constraint firstAttribute="width" constant="328.5" id="v7L-mL-yfj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajr-87-gL8">
+                                <rect key="frame" x="313" y="800" width="54" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="m7S-F0-Dao"/>
+                                    <constraint firstAttribute="height" constant="30" id="uV2-IA-6Xl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pZf-CZ-TpK" kind="show" id="iQu-xK-VPX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zmj-Y3-XTF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="385-ey-Vyh"/>
+                            <constraint firstItem="Zmj-Y3-XTF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cIh-j1-pMH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ajr-87-gL8" secondAttribute="bottom" constant="32" id="pgg-H1-Hm6"/>
+                            <constraint firstItem="ajr-87-gL8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="313" id="yId-xN-oaF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="117.85714285714285"/>
+        </scene>
+        <!--Recommendation View Controller-->
+        <scene sceneID="VLL-Ae-dOD">
+            <objects>
+                <viewController id="pZf-CZ-TpK" userLabel="Recommendation View Controller" customClass="ViewController" customModule="What_to_do_in_Summer_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WIn-DP-dw6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Activities" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2q-4A-4rh">
+                                <rect key="frame" x="20" y="124" width="309" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="AzI-SA-PPh"/>
+                                    <constraint firstAttribute="width" constant="309" id="dJg-wW-tGS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m3N-gJ-tbc">
+                                <rect key="frame" x="28" y="177" width="358" height="395"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="358" id="2Qk-mH-hW6"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lME-Tr-5DK">
+                                <rect key="frame" x="20" y="696" width="73" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="4RF-wV-WpR"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="73" id="iDW-bY-tUP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="DEK-6s-U1o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHw-VT-QRX">
+                                <rect key="frame" x="95.5" y="604" width="223" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="223" id="KhD-bu-ff2"/>
+                                    <constraint firstAttribute="height" constant="36" id="weI-7c-11z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Click for Activities">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomgenerator:" destination="pZf-CZ-TpK" eventType="touchUpInside" id="pX7-5k-4r3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RHw-VT-QRX" firstAttribute="top" secondItem="m3N-gJ-tbc" secondAttribute="bottom" constant="32" id="1BS-b3-Mts"/>
+                            <constraint firstItem="m3N-gJ-tbc" firstAttribute="top" secondItem="j9l-TI-WJl" secondAttribute="top" constant="133" id="7gb-cd-hDL"/>
+                            <constraint firstItem="d2q-4A-4rh" firstAttribute="top" secondItem="j9l-TI-WJl" secondAttribute="top" constant="80" id="Fh6-sI-JqM"/>
+                            <constraint firstItem="lME-Tr-5DK" firstAttribute="leading" secondItem="m3N-gJ-tbc" secondAttribute="leading" id="L0z-H5-c1I"/>
+                            <constraint firstItem="j9l-TI-WJl" firstAttribute="bottom" secondItem="lME-Tr-5DK" secondAttribute="bottom" constant="120" id="RqG-8f-Nsa"/>
+                            <constraint firstItem="RHw-VT-QRX" firstAttribute="centerX" secondItem="WIn-DP-dw6" secondAttribute="centerX" id="cUA-sH-Rcq"/>
+                            <constraint firstItem="lME-Tr-5DK" firstAttribute="top" secondItem="RHw-VT-QRX" secondAttribute="bottom" constant="2" id="jnq-z7-jCm"/>
+                            <constraint firstItem="m3N-gJ-tbc" firstAttribute="centerX" secondItem="RHw-VT-QRX" secondAttribute="centerX" id="lQg-Wh-5ID"/>
+                            <constraint firstItem="d2q-4A-4rh" firstAttribute="leading" secondItem="j9l-TI-WJl" secondAttribute="leading" constant="61" id="oqc-tj-kQb"/>
+                            <constraint firstItem="j9l-TI-WJl" firstAttribute="bottom" secondItem="RHw-VT-QRX" secondAttribute="bottom" constant="222" id="pUY-SI-3cy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j9l-TI-WJl"/>
+                    </view>
+                    <connections>
+                        <outlet property="RecommendationImageView" destination="m3N-gJ-tbc" id="Tdc-ZN-m4q"/>
+                        <outlet property="randomactivities" destination="d2q-4A-4rh" id="1CU-ai-hXQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m2z-NL-6Xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873.91304347826099" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+</document>
